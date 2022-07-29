@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif ;
+}
+body
+{
+    background: #F99F9F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+.container .sebelah_kiri
+{
+    position: relative;
+    background: #C30000;
+    padding: 40px;
+
+}
+.teksprofile
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.teksprofile .gambar8x
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.teksprofile .gambar8x img
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.teksprofile h2
+{
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.4em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.teksprofile h2 span
+{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.ingfokontak
+{
+    padding-top: 40px;
+}
+.title
+{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.ingfokontak ul
+{
+    position: relative;
+}
+.ingfokontak ul li
+{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.ingfokontak ul li .ikon
+{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #FF7E7E;
+}
+.ingfokontak ul li span
+{
+    color: #fff;
+    font-weight: 300;
+}
+.edukasi li
+{
+    margin-bottom: 15px;
+}
+.edukasi h5
+{
+    color: #FF7E7E;
+    font-weight: 500;
+}
+.edukasi h4:nth-child(2)
+{
+    color: white;
+    font-weight: 500;
+}
+.edukasi h4
+{
+    color: white;
+    font-weight: 300;
+}
+.bahasa li .teks
+{
+    color: white;
+}
+
+.bahasa .persen
+{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.bahasa .persen div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #fd6060;
+}
+
+.container .sebelah_kanan
+{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+    
+}
+.tentang
+{
+    margin-bottom: 50px;
+}
+.tentang:last-child
+{
+    margin-bottom: 0;
+}
+.judul2
+{
+    color: #CE0000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p
+{
+    color: #AD0000;
+}
+.tentang .kotak 
+{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.tentang .kotak .tahun_perusahaan
+{
+    min-width: 150px;
+}
+.tentang .kotak .tahun_perusahaan h5
+{
+    text-transform: uppercase;
+    color: #C4B2B2;
+    font-weight: 600;
+}
+.tentang .kotak .teks h4
+{
+    text-transform: uppercase;
+    color: #F87878;
+    font-size: 16px;
+}
+.tentang_skill .kotak
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.tentang_skill .kotak .persen
+{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+.tentang_skill .kotak .persen div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #fd6060;
+}
+.tentang_tertarik ul
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.tentang_tertarik ul li 
+{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+}
+.tentang_tertarik ul li .fa
+{
+    color: #FF7E7E;
+    width: 20px;
+    font-size: 18px;
+}
+@media (max-width: 1000px)
+{
+    .container
+    {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .tentang_tertarik ul
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 600px)
+{
+    .tentang .kotak
+    {
+        flex-direction: column;
+    }
+    .tentang .kotak .tahun_perusahaan
+    {
+        margin-bottom: 5px;
+    }
+    .tentang_tertarik ul
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .tentang_skill .kotak
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
