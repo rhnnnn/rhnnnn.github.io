@@ -1,0 +1,24 @@
+.content-wrap{
+    margin: 15px 0 15px 0;
+    padding: 0;
+}
+.content-wrap::after{
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    visibility: hidden;
+}
+.inner-content {
+    margin: 25px 15px 10px 15px;
+    padding: 0;
+}
+.inner-content::after{
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    visibility: hidden;
+}
