@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- {{-- Style hell --}} -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title></title>
+</head>
+<body>
+    <!-- {{-- Global Wrapper Start --}} -->
+        <div class="wrap">
+            <div class="inner-wrap">
+                <!-- {{-- Navbar Start --}} -->
+                <nav class="nav-wrap">
+                    <nav class="prime-nav-wrap">
+                        <ul class="prime-nav">
+                            <li class="prime-nav-list">
+                                <a class="nav-link link-active" href="/">Home</a>
+                                <a href="/about" class="nav-link">About</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </nav>
+                <!-- {{-- Navbar End --}} -->
+                <!-- {{-- Content Start --}} -->
+                <div class="content-wrap">
+                    <div class="inner-content" id="content">
+                        <!-- @yield('content') -->
+                    </div>
+                </div>
+                <!-- {{-- Content End --}} -->
+            </div>
+        </div>
+        <script type="module" src="/core/app.js"></script>
+</body>
+</html>
