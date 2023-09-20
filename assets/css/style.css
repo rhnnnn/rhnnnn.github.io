@@ -1,0 +1,25 @@
+/* import things */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+@import url(navbar.css);
+@import url(page.css);
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: url(../image/background/greydots.png) repeat;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: small;
+    color: #333;
+}
+
+.wrap{
+    width: 65%;
+    margin: auto auto 15px auto;
+    text-align: justify;
+    background: white;
+}
+.inner-wrap{
+    width: 95%;
+    margin: auto;
+}
