@@ -23,3 +23,12 @@ body{
     width: 95%;
     margin: auto;
 }
+.header-wrap{
+    width: 100%;
+    margin: 10px 0 5px 0;
+    clear: both;
+}
+.header-wrap a{
+    text-decoration: none;
+    color: #333;
+}
