@@ -1,6 +1,9 @@
-import route from "../../core/routes.js"
+import route from "../../core/routes.js";
 
-// only watch navbar click only
+// calling route list from routes.js
+const routeList = route
+
+// watch navbar click only
 document.addEventListener("click",(e)=>{
 	const {target}=e
 	if (!target.matches("nav nav ul li a")) {
@@ -9,10 +12,6 @@ document.addEventListener("click",(e)=>{
 	e.preventDefault()
 	routeUrl()
 })
-
-// calling route list from routes.js
-const routes = route
-
 
 const routeUrl=(event)=>{
 	event=event||window.event
@@ -28,13 +27,27 @@ const handlerUrlLocation=async()=>{
 		location="/"
 	}
 
-	const router=routes[location]||routes[404]
+	// active nav 
+	const activeNav=document.querySelectorAll("nav nav ul li a")
 
-	const html=await fetch(router.template).then((response)=>response.text())
+	activeNav.forEach((link)=>{
+		if (link.getAttribute("href")===location) {
+			link.classList.add("link-active")
+		} else {
+			link.classList.remove("link-active")
+		}
+	})
+	// active nav end
+
+	const router=routeList[location]||routeList[404]
+
+	const pageTitle=router.title+" | "+window.location.host
+
+	const html=await fetch(router.view+".html").then((response)=>response.text())
 
 	document.getElementById("content").innerHTML=html
 
-	document.title=router.title
+	document.title=pageTitle
 }
 
 window.onpopstate=handlerUrlLocation
